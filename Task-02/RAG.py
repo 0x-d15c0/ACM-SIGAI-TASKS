@@ -48,3 +48,4 @@ def rag(question):
 
     result = retrievalQA.invoke({"query": question})
     return result['result']
+
