@@ -80,3 +80,7 @@ for i in range(5):
     print('Predicted:', argmax(p))
 ```
 <i>Accuracy : 99.36000108718872</i>
+
+![image](https://github.com/0x-d15c0/ACM-SIGAI-TASKS/assets/117750351/82de7f30-e97e-46e3-a106-90a9bf161342)
+![image](https://github.com/0x-d15c0/ACM-SIGAI-TASKS/assets/117750351/f894c69b-0060-41d3-a3b4-2cd2bea61392)
+
