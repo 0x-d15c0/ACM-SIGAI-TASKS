@@ -23,7 +23,7 @@ x_train = x_train.astype('float32') / 255.0
 x_test = x_test.astype('float32') / 255.0
 ```
 The images are reshaped to include a single channel - gray (grayscale).
-## 2. Model Architecture
+## 2. Network Architecture
 ```py
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
@@ -37,6 +37,46 @@ model.add(Dropout(0.5))
 model.add(Flatten())
 model.add(Dense(500, activation='relu'))
 model.add(Dense(10, activation='softmax'))
+``` 
+
+<details>
+  <summary><i><b>Surface level working of the architecture</b></i></summary>
+
+* **Conv2D**: Introduces a 2D convolution kernel (a matrix) used for detecting spaces and edges. It works like a set of moving filters over the input image which is then activated using an activation function (ReLU in this case).
+* **MaxPool2D**: Reduces the spatial dimensions of the input , performing downsampling by taking the maximum value in each region (part) of the input.
+* **Dropout**: Regularization technique that randomly sets a fraction of input units to zero during training to prevent overfitting.
+* **Flatten**: Converts the 3D output of convolutional layers into a 1D matrix, making it suitable for input to fully connected layers.
+* **Dense**: Fully connected layers which perform high-level classification. Each neuron in a Dense layer is connected to every neuron in the previous layer.
+* **Softmax Activation**: Applied in the final layer for multi-class classification, converting raw scores into probabilities .
+  
+</details>
+
+## 3. Network Compilation
+```py
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
 ```
- What is the purpose of all these layers - a surface level overview of how they work :
- 
+## 4. Training and Evaluation
+```py
+history = model.fit(x_train, y_train,
+                    epochs=20,
+                    batch_size=128,
+                    verbose=2,
+                    validation_data=(x_test, y_test))
+```
+```py
+loss, accuracy = model.evaluate(x_test, y_test, verbose=0)
+print(f'Accuracy: {accuracy * 100}')
+```
+## 5. Prediction
+```py
+for i in range(5):
+    image = x_train[i]
+    plt.imshow(np.squeeze(image), cmap='gray')
+    plt.show()
+    image = image.reshape(1, 28, 28, 1)
+    p = model.predict(image)
+    print('Predicted:', argmax(p))
+```
+<i>Accuracy : 99.36000108718872</i>
