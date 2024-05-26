@@ -97,4 +97,13 @@ for i, box in enumerate(boxes):
 pyplt.imshow(img_rgb)
 pyplt.show()
 ```
+## Model evaluation
+The detection accuracy can be evaluated by looking at the confidence values , in this case :
 
+```txt
+Detections: 4
+Box 0: [321, 249, 354, 141], Confidence: 0.5824825763702393, Class ID: 2
+Box 1: [385, 250, 283, 143], Confidence: 0.9310110211372375, Class ID: 2
+Box 2: [260, 180, 149, 352], Confidence: 0.9800253510475159, Class ID: 0
+Box 3: [228, 343, 237, 222], Confidence: 0.545195460319519, Class ID: 1
+```
