@@ -1,10 +1,10 @@
 # Transfer Learning with YOLOv3-tiny for Object Detection
 
 ### Introduction
-In this project, I demonstrate transfer learning using the YOLOv3-tiny model for object detection. It uses a random object detection dataset to evaluate the model's performance and metrics. YOLO (You Only Look Once) is a state-of-the-art, real-time object detection system that applies a single neural network to the full image. YOLOv3-tiny is a smaller, faster version of YOLOv3, making it suitable for real-time applications on limited hardware.
+This project demonstrates transfer learning using the YOLOv3-tiny model for object detection. It uses a random object detection dataset to evaluate the model's performance and metrics. YOLO (You Only Look Once) is a state-of-the-art, real-time object detection system that applies a single neural network to the full image. YOLOv3-tiny is a smaller, faster version of YOLOv3, making it suitable for real-time applications on limited hardware.
 
 ### Model Selection
-I've chosen the YOLOv3-tiny model for this project due to its efficiency and relatively good accuracy. YOLOv3-tiny is a lightweight version of YOLOv3, making it suitable for applications requiring faster inference times. 
+I've chosen the YOLOv3-tiny model for this project due to its efficiency and relatively good accuracy. YOLOv3-tiny is a lightweight version of YOLOv3, making it suitable for applications requiring faster inference times <i>(in this case easier use on google colab).</i>
 
 ### Dataset 
 The COCO (Common Objects in Context) dataset is a large-scale object detection, segmentation, and captioning dataset. 
@@ -114,3 +114,4 @@ Box 3: [228, 343, 237, 222], Confidence: 0.545195460319519, Class ID: 1
 ### Output Image
 ![Alt text](./images/finalimage.png)
 
+#### As we can see the model detects the person with 98% confidence, the car with 93% confidence and the bicycle with 55% confidence .
