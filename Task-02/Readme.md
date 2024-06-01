@@ -1,5 +1,5 @@
 # RAG Chatbot Project
-This project implements a Retrieval-Augmented Generation (RAG) chatbot using the Ollama model with FAISS for document retrieval. The chatbot is designed to answer user queries based on the content of a set of PDF documents. A Streamlit interface is used to provide an interactive chat experience.
+This project implements a Retrieval-Augmented Generation (RAG) chatbot using the Phi3 model from Ollama with FAISS for document retrieval. The chatbot is designed to answer user queries based on the content of a set of PDF documents. A Streamlit interface is used to provide an interactive chat experience.
 
 * Ollama Phi3 Model: The language model used for generating responses.
 * HuggingFace Bge Embeddings: Used for embedding the document chunks.
@@ -24,4 +24,5 @@ pip install -r requirements.txt
 ```sh
 streamlit run frontend.py
 ```
+_______________________________________
 ![image](https://github.com/0x-d15c0/ACM-SIGAI-TASKS/assets/117750351/afe91928-a65c-490d-8841-abe9c012a4ec)
