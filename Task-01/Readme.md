@@ -4,8 +4,7 @@ The code includes loading and preprocessing the data and training the network an
 
 #### Libraries used
 1. numpy
-2. Tensorflow
-3. Keras
+2. Tensorflow and Keras
 4. matplotlib
 
 -------------------
@@ -79,8 +78,14 @@ for i in range(5):
     p = model.predict(image)
     print('Predicted:', argmax(p))
 ```
-<i>Accuracy : 99.36000108718872</i>
+------------------------------------------------------------
+### Output
+<b><i>Accuracy : 99.36000108718872</i></b>
 
 ![image](https://github.com/0x-d15c0/ACM-SIGAI-TASKS/assets/117750351/82de7f30-e97e-46e3-a106-90a9bf161342)
 ![image](https://github.com/0x-d15c0/ACM-SIGAI-TASKS/assets/117750351/f894c69b-0060-41d3-a3b4-2cd2bea61392)
 
+## Reference
+1. https://www.analyticsvidhya.com/blog/2020/02/learn-image-classification-cnn-convolutional-neural-networks-3-datasets/
+2. https://medium.com/@jwbtmf/reshaping-the-dataset-for-neural-network-15ee7bcea25e
+3. https://www.geeksforgeeks.org/introduction-convolution-neural-network/
